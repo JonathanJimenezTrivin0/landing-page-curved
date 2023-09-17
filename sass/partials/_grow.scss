@@ -1,0 +1,52 @@
+.grow {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $Very-Pale-Blue;
+
+  &__title {
+    font-size: 40px;
+    font-weight: 700;
+    padding-bottom: 25px;
+    font-family: $font-family-Poppins;
+  }
+  &__description {
+    width: 490px;
+    line-height: 1.5em;
+    font-weight: 400;
+    font-family: $font-family-Open;
+    color: $Very-Dark-Cyan;
+  }
+  &__img {
+    width: 515px;
+    animation: rotateY 1500ms infinite alternate ease-in-out 1000ms;
+    @keyframes rotateY {
+      0% {
+        transform: rotateY(0deg);
+      }
+
+      100% {
+        transform: rotateY(15deg);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .grow {
+    flex-direction: column-reverse;
+    &__title {
+      font-size: 25px;
+      text-align: center;
+    }
+    &__description {
+      width: auto;
+      text-align: center;
+    }
+    &__img {
+      padding-bottom: 70px;
+    }
+  }
+}

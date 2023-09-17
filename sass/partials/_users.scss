@@ -1,0 +1,12 @@
+.users {
+  @extend .grow;
+  &__title {
+    @extend .grow__title;
+  }
+  &__description {
+    @extend .grow__description;
+  }
+  &__img {
+    @extend .grow__img;
+  }
+}

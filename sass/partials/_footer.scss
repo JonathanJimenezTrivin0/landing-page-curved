@@ -1,0 +1,175 @@
+.footer {
+  max-width: 1440px;
+  padding-top: 120px;
+  padding-bottom: 90px;
+  font-family: $font-family-Open;
+  margin: 0 auto;
+  height: fit-content;
+  color: $Very-Pale-Blue;
+  background-color: $Very-Dark-Cyan;
+  display: flex;
+  justify-content: space-between;
+  .address {
+    &__logo {
+      @extend .navbar__logo;
+      width: auto;
+      padding-bottom: 30px;
+    }
+    &__description {
+      width: 300px;
+      padding-bottom: 30px;
+      font-size: 14.5px;
+      line-height: 1.5em;
+    }
+  }
+  .phone {
+    display: flex;
+    gap: 15px;
+    padding-bottom: 20px;
+  }
+  .email {
+    @extend .phone;
+    padding-bottom: 80px;
+  }
+  .socialMedia {
+    display: flex;
+    gap: 20px;
+    &__circle {
+      width: 32px;
+      width: 32px;
+      border-radius: 10%;
+      background-color: $Very-Pale-Blue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background-color 400ms $cubic;
+      &:hover {
+        background-color: $Very-Dark-Cyan-alfa3;
+      }
+    }
+    &__circle:nth-child(1) {
+      justify-content: end;
+    }
+    &__svg {
+      fill: $Very-Dark-Cyan;
+    }
+    &__svgInsta {
+      fill: $Very-Pale-Blue;
+      transition: fill 400ms $cubic;
+      &:hover {
+        fill: $Very-Dark-Cyan-alfa3;
+      }
+    }
+  }
+  .newsletter {
+    &__title {
+      padding-bottom: 30px;
+      text-transform: uppercase;
+    }
+    &__description {
+      width: 340px;
+      padding-bottom: 40px;
+      font-size: 14.5px;
+      line-height: 1.5em;
+    }
+    &__form {
+      display: flex;
+      gap: 30px;
+    }
+    &__input {
+      width: 320px;
+      height: 50px;
+      border-radius: 5px;
+      border: none;
+    }
+    &__btn {
+      @extend .header__btn;
+      width: 200px;
+      height: 50px;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .footer {
+    padding-top: 70px;
+    padding-bottom: 40px;
+    max-width: 375px;
+    flex-direction: column-reverse;
+    .newsletter {
+      &__title {
+        padding-bottom: 25px;
+        font-size: 20px;
+      }
+      &__description {
+        width: auto;
+        font-size: 13.5px;
+        padding-bottom: 35px;
+      }
+      &__form {
+        gap: 14px;
+        padding-bottom: 0;
+        flex-wrap: wrap;
+        justify-content: end;
+      }
+      &__btn {
+        width: 160px;
+      }
+    }
+    .address {
+      &__logo {
+        height: auto;
+        padding: 0;
+      }
+      &__description {
+        padding-top: 18px;
+      }
+      .phone {
+        align-items: center;
+        &__img {
+          width: 20px;
+          height: 20px;
+        }
+        &__number {
+          font-size: 13px;
+        }
+      }
+      .email {
+        padding-bottom: 40px;
+        align-items: center;
+        &__img {
+          width: 20px;
+          height: 20px;
+        }
+        &__mail {
+          font-size: 13px;
+        }
+      }
+    }
+    .socialMedia {
+      gap: 15px;
+      &__circle {
+        width: 25px;
+        height: 25px;
+      }
+      &__svg {
+        width: 18px;
+        height: 18px;
+      }
+      &__svgInsta {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+}
+
+.attribution {
+  font-size: 12px;
+  text-align: center;
+}
+.attribution a {
+  color: $Light-Pink;
+}

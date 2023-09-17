@@ -1,0 +1,32 @@
+.flowing {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 200px;
+  padding-bottom: 250px;
+  background-color: $White;
+  background-image: url(../images/bg-section-bottom-desktop-1.svg),
+    url(../images/bg-section-top-desktop-2.svg);
+  background-position: top, bottom;
+  background-repeat: no-repeat;
+
+  &__title {
+    @extend .grow__title;
+  }
+  &__description {
+    @extend .grow__description;
+  }
+  &__img {
+    @extend .grow__img;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .flowing {
+    padding-top: 140px;
+    padding-bottom: 180px;
+    flex-direction: column;
+    background-image: url(../images/bg-section-bottom-mobile-1.svg),
+      url(../images/bg-section-top-mobile-2.svg);
+  }
+}

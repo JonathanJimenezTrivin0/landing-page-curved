@@ -1,0 +1,33 @@
+.community {
+  padding-top: 250px;
+  padding-bottom: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__title {
+    font-size: 40px;
+    margin-bottom: 50px;
+    color: $Very-Dark-Cyan;
+    font-family: $font-family-Poppins;
+  }
+  &__btn {
+    @extend .header__btn;
+  }
+  background-image: url(../images/bg-section-bottom-desktop-2.svg),
+    url(../images/bg-footer-top-desktop.svg);
+  background-position: top, bottom;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 1300px) {
+  .community {
+    padding-top: 150px;
+    padding-bottom: 150px;
+    background-image: url(../images/bg-section-bottom-mobile-2.svg),
+      url(../images/bg-footer-top-mobile.svg);
+    &__title {
+      font-size: 25px;
+      text-align: center;
+    }
+  }
+}
