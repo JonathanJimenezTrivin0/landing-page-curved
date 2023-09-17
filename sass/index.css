@@ -205,6 +205,9 @@ a {
     height: 40px;
     font-size: 14px;
   }
+  .header__img {
+    width: 300px;
+  }
   .header .figures {
     margin-bottom: 70px;
   }
